@@ -18,6 +18,19 @@ At the bottom of the body in you html add the script [cc_nav.js](/dist/cc_nav.js
 <script type="text/javascript" src="cc_nav.js"></script>
 ```
 
+```html
+<!-- githosted files -->
+<script
+  type="text/javascript"
+  src="https://matthijskamstra.github.io/drop-in-off-canvas-menu/cc_nav.js"
+></script>
+<!-- or minified -->
+<script
+  type="text/javascript"
+  src="https://matthijskamstra.github.io/drop-in-off-canvas-menu/cc_nav.min.js"
+></script>
+```
+
 create file with the name `nav.html` with content that will be the navigation
 
 ```html
