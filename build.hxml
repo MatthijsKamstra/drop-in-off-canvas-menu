@@ -1,3 +1,4 @@
+-lib uglifyjs
 -cp src
 -main Main
 -js docs/cc_nav.js
