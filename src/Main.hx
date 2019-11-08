@@ -4,7 +4,7 @@ import js.Browser.*;
 import js.html.XMLHttpRequest;
 
 class Main {
-	var url = "_nav.html";
+	var url = "nav.html";
 	var req = new XMLHttpRequest();
 
 	public function new() {

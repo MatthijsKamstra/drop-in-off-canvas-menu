@@ -4,6 +4,8 @@ Quickly create an off canvas menu
 
 I usually work lots of different files, and it would be nice to quicly add a navigation without all the research..
 
+See the [example](https://matthijskamstra.github.io/drop-in-off-canvas-menu/).
+
 ## Goal
 
 minimal css and javascript in the page to get some for of navigation.
