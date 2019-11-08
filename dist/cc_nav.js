@@ -19,7 +19,7 @@ var Main = function() {
 	nav.id = "storage";
 	nav.className = "slideout-sidebar";
 	window.document.body.append(nav);
-	this.loadHTML(this.url,window.document.getElementById("storage"));
+	this.loadHTML(this.url,nav);
 };
 Main.main = function() {
 	var app = new Main();
@@ -39,7 +39,7 @@ Main.prototype = {
 			if(body == "") {
 				body = _gthis.req.response;
 			}
-			_gthis.processHTML(body,window.document.getElementById("storage"));
+			_gthis.processHTML(body,el);
 		};
 		this.req.onerror = function(error) {
 			window.console.error("[JS] error: " + error);

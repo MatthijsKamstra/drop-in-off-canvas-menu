@@ -8,7 +8,7 @@ class Main {
 	var req = new XMLHttpRequest();
 
 	public function new() {
-		trace('dd');
+		trace('cc-nav: a drop in off-canvas menu');
 
 		// ficons add to document
 		var link = document.createLinkElement();
@@ -22,20 +22,20 @@ class Main {
 		link.rel = "stylesheet";
 		document.head.appendChild(link);
 
-		// basic stuff for menu
+		// basic stuff for menu at the top of body
 		var input = htmlToElement('<input type="checkbox" id="menu-toggle" />');
 		var label = htmlToElement('<label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>');
 		document.body.prepend(label);
 		document.body.prepend(input);
 
-		// <nav id="storage" class="slideout-sidebar" style="display:_none;"></nav>
+		// nav
 		var nav = document.createElement('nav');
 		nav.id = "storage";
 		nav.className = "slideout-sidebar";
 		document.body.append(nav);
 
 		// storage
-		loadHTML(url, document.getElementById("storage"));
+		loadHTML(url, nav);
 	}
 
 	function htmlToElement(html:String) {
@@ -49,22 +49,23 @@ class Main {
 		// your code
 		req.open('GET', url);
 		req.onload = function() {
-			// trace(req.response);
 			var body = getBody(req.response);
-			// trace(body);
 			if (body == "")
 				body = req.response;
-			processHTML(body, document.getElementById("storage"));
-			// trace( document.getElementById("storage"));
+			processHTML(body, el);
 		};
-
 		req.onerror = function(error) {
 			console.error('[JS] error: $error');
 		};
-
 		req.send();
 	}
 
+	/**
+	 * get the body of the document...
+	 * but I really don't need all html to have a navigation
+	 *
+	 * @param html
+	 */
 	function getBody(html) {
 		var test:String = html.toLowerCase(); // to eliminate case sensitivity
 		var x:Int = test.indexOf("<body");

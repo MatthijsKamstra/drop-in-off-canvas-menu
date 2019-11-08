@@ -3,7 +3,7 @@
 var Main = function() {
 	this.req = new XMLHttpRequest();
 	this.url = "nav.html";
-	console.log("src/Main.hx:11:","dd");
+	console.log("src/Main.hx:11:","cc-nav: a drop in off-canvas menu");
 	var link = window.document.createElement("link");
 	link.href = "https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css";
 	link.rel = "stylesheet";
@@ -20,7 +20,7 @@ var Main = function() {
 	nav.id = "storage";
 	nav.className = "slideout-sidebar";
 	window.document.body.append(nav);
-	this.loadHTML(this.url,window.document.getElementById("storage"));
+	this.loadHTML(this.url,nav);
 };
 Main.main = function() {
 	var app = new Main();
@@ -40,7 +40,7 @@ Main.prototype = {
 			if(body == "") {
 				body = _gthis.req.response;
 			}
-			_gthis.processHTML(body,window.document.getElementById("storage"));
+			_gthis.processHTML(body,el);
 		};
 		this.req.onerror = function(error) {
 			window.console.error("[JS] error: " + error);
