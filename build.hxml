@@ -1,0 +1,17 @@
+-cp src
+-main Main
+-js docs/cc_nav.js
+-D source-map-content
+-debug
+# -dce full
+# -dce no
+#
+--next
+
+-lib uglifyjs
+-cp src
+-main Main
+-js dist/cc_nav.js
+-dce full
+--no-traces
+
