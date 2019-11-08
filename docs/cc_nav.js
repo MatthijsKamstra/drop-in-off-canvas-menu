@@ -2,7 +2,7 @@
 (function ($global) { "use strict";
 var Main = function() {
 	this.req = new XMLHttpRequest();
-	this.url = "_nav.html";
+	this.url = "nav.html";
 	console.log("src/Main.hx:11:","dd");
 	var link = window.document.createElement("link");
 	link.href = "https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css";
