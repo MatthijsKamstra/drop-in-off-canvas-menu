@@ -1,0 +1,77 @@
+:root {
+  --black: #212121;
+  --white: #ffffff;
+  --sidebar-width: 250px;
+  --icon-padding: 20px;
+  --icon-left: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Slideout Sidebar */
+.slideout-sidebar {
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: calc(-1 * var(--sidebar-width));
+  width: var(--sidebar-width);
+  height: 100%;
+  background-color: var(--black);
+  transition: all 300ms ease-in-out;
+  overflow: scroll;
+  padding: 0;
+  margin: 0;
+}
+
+.slideout-sidebar a {
+  color: var(--white);
+  outline: none;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.slideout-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 20px;
+}
+
+.slideout-sidebar ul li {
+  cursor: pointer;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.4);
+}
+
+.slideout-sidebar ul li:last-child {
+  border-bottom: 0;
+}
+
+/* Menu Icon */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  z-index: 20000;
+  transition: all 300ms ease-in-out;
+  padding: var(--icon-padding);
+  cursor: pointer;
+}
+
+/* The Magic */
+#menu-toggle:checked ~ .slideout-sidebar {
+  left: 0px;
+}
+
+#menu-toggle:checked + .menu-icon {
+  left: calc(var(--icon-left) + var(--sidebar-width));
+}
