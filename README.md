@@ -16,7 +16,7 @@ minimal css and javascript in the page to get some for of navigation.
 - [ ] css
 - [ ] more flexible
 - [ ] generic hamburger menu icon
-- [ ] remove font for hambuger menu
+- [ ] remove font for hambuger menu (<https://ficons.fiction.com/>)
 
 ## code
 
