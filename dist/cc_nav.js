@@ -7,6 +7,10 @@ var Main = function() {
 	link.href = "https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css";
 	link.rel = "stylesheet";
 	window.document.head.appendChild(link);
+	var link1 = window.document.createElement("link");
+	link1.href = "https://matthijskamstra.github.io/monkee-style/dist/monkee.css";
+	link1.rel = "stylesheet";
+	window.document.head.appendChild(link1);
 	var input = this.htmlToElement("<input type=\"checkbox\" id=\"menu-toggle\" />");
 	var label = this.htmlToElement("<label for=\"menu-toggle\" class=\"menu-icon\"><i class=\"fa fa-bars\"></i></label>");
 	window.document.body.prepend(label);

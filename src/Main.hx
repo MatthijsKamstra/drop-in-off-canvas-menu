@@ -16,6 +16,12 @@ class Main {
 		link.rel = "stylesheet";
 		document.head.appendChild(link);
 
+		// for now monkee.style is added as well
+		var link = document.createLinkElement();
+		link.href = "https://matthijskamstra.github.io/monkee-style/dist/monkee.css";
+		link.rel = "stylesheet";
+		document.head.appendChild(link);
+
 		// basic stuff for menu
 		var input = htmlToElement('<input type="checkbox" id="menu-toggle" />');
 		var label = htmlToElement('<label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>');
