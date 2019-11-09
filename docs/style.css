@@ -1,9 +1,8 @@
 :root {
-  --black: #212121;
-  --white: #ffffff;
+  --color-background: #212121;
+  --color-font: #ffffff;
   --sidebar-width: 250px;
-  --icon-padding: 20px;
-  --icon-left: 20px;
+  --icon-padding: 15px;
 }
 
 body {
@@ -20,15 +19,15 @@ body {
   left: calc(-1 * var(--sidebar-width));
   width: var(--sidebar-width);
   height: 100%;
-  background-color: var(--black);
+  background-color: var(--color-background);
   transition: all 300ms ease-in-out;
-  overflow: scroll;
+  overflow: auto;
   padding: 0;
   margin: 0;
 }
 
 .slideout-sidebar a {
-  color: var(--white);
+  color: var(--color-font);
   outline: none;
   text-decoration: none;
   font-size: 0.8rem;
@@ -65,7 +64,13 @@ body {
   transition: all 300ms ease-in-out;
   padding: var(--icon-padding);
   cursor: pointer;
-  color:var( --black);
+  color: var(--color-background);
+  background-color: rgba(33, 33, 33, 0);
+}
+
+.menu-icon:hover {
+  background-color: rgba(33, 33, 33, 1);
+  color: var(--color-font);
 }
 
 /* The Magic */
@@ -74,5 +79,7 @@ body {
 }
 
 #menu-toggle:checked + .menu-icon {
-  left: calc(var(--icon-left) + var(--sidebar-width));
+  left: var(--sidebar-width);
+  background-color: rgba(33, 33, 33, 1);
+  color: var(--color-font);
 }
