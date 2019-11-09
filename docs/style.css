@@ -66,6 +66,8 @@ body {
   cursor: pointer;
   color: var(--color-background);
   background-color: rgba(33, 33, 33, 0);
+  display: block;
+  user-select: none;
 }
 
 .menu-icon:hover {
