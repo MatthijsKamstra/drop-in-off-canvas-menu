@@ -6,6 +6,11 @@ I usually work lots of different files, and it would be nice to quicly add a nav
 
 See the [example](https://matthijskamstra.github.io/drop-in-off-canvas-menu/).
 
+**weird**
+
+I wanted to create a css only off-canvas menu... which worked, but I need a lot of javascript to get it injected into pages..
+Defeats the purpose of using css only... not every wheel is rounder!
+
 ## Goal
 
 minimal css and javascript in the page to get some for of navigation.
@@ -36,5 +41,7 @@ create file with the name `nav.html` with content that will be the navigation
 ```html
 <ul>
   <li><a href="#love">I ❤</a></li>
+  <li><a href="#hate">I not ...</a></li>
+  ....
 </ul>
 ```
